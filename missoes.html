@@ -1,0 +1,284 @@
+	<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missões do Portfólio - O Currículo do Futuro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+
+        .mission-card {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .mission-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            user-select: none;
+        }
+
+        .bg-front { background: linear-gradient(135deg, #3498db, #2980b9); }
+        .bg-back { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+        .bg-pro { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+
+        .icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .mission-content {
+            display: none;
+            padding: 25px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        /* Estilo da Árvore Visual Corrigido */
+        .tree-view {
+            background-color: #282a36;
+            color: #f8f8f2;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem; /* Fonte um pouco menor para caber melhor */
+            line-height: 1.5;
+            overflow-x: auto; /* Cria barra de rolagem se ficar muito grande */
+            white-space: pre; /* O SEGREDO AQUI: Impede o navegador de quebrar as linhas! */
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            margin: 15px 0;
+        }
+
+        .tree-view span.folder { color: #8be9fd; font-weight: bold; }
+        .tree-view span.file { color: #50fa7b; }
+        .tree-view span.comment { color: #6272a4; font-style: italic; }
+
+        /* Estilo do Checklist Interativo */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: flex-start;
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #bdc3c7;
+            transition: all 0.2s ease;
+        }
+
+        .checklist li:hover {
+            background-color: #f1f2f6;
+        }
+
+        .checklist input[type="checkbox"] {
+            margin-top: 5px;
+            margin-right: 15px;
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
+        .checklist input[type="checkbox"]:checked + div {
+            text-decoration: line-through;
+            color: #95a5a6;
+        }
+
+        .checklist input[type="checkbox"]:checked {
+            accent-color: #2ecc71;
+        }
+
+        code {
+            background-color: #dfe6e9;
+            color: #d35400;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Missões Práticas: O Seu Portfólio</h1>
+            <p>Marque as caixinhas conforme for concluindo os passos!</p>
+        </div>
+
+        <div class="mission-card">
+            <div class="mission-header bg-front" onclick="toggleMission('m1', this)">
+                <span>🎨 Missão 1: A Vitrine (Front-End)</span>
+                <span class="icon">➕</span>
+            </div>
+            <div id="m1" class="mission-content">
+                <h3>Passo 1: Configurar no GitHub</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox"> <div>Criar um repositório chamado <code>portfolio-react</code></div></li>
+                    <li><input type="checkbox"> <div>Colocar a descrição: "Meu portfólio profissional em React"</div></li>
+                    <li><input type="checkbox"> <div>Marcar as 3 caixinhas: <strong>README</strong>, <strong>.gitignore</strong> (Node) e <strong>License</strong> (MIT)</div></li>
+                </ul>
+
+                <h3>Passo 2: Construir as Pastas</h3>
+                <p>Crie exatamente esta estrutura usando o truque da barra ( <code>/</code> ):</p>
+                
+                <div class="tree-view">
+<span class="folder">📁 portfolio-react/</span>
+├── <span class="folder">📁 src/</span>                  <span class="comment">(Onde o código mora)</span>
+│   ├── <span class="folder">📁 assets/</span>             <span class="comment">(Suas imagens)</span>
+│   ├── <span class="folder">📁 components/</span>         <span class="comment">(Botões e menu)</span>
+│   ├── <span class="folder">📁 pages/</span>              <span class="comment">(Telas inteiras)</span>
+│   └── <span class="folder">📁 styles/</span>             <span class="comment">(Cores e CSS)</span>
+├── <span class="folder">📁 public/</span>
+└── <span class="folder">📁 docs/</span>
+                </div>
+
+                <ul class="checklist">
+                    <li><input type="checkbox"> <div>Criei todas as pastas acima no GitHub.</div></li>
+                </ul>
+
+                <h3>Passo 3: O Conteúdo Obrigatório</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox"> <div>Criar as 3 páginas principais: Home, Projetos e Contato.</div></li>
+                    <li><input type="checkbox"> <div>Escrever no arquivo <code>README.md</code> como instalar o projeto.</div></li>
+                    <li><input type="checkbox"> <div>Colocar o site no ar (Deploy via GitHub Pages ou Vercel).</div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mission-card">
+            <div class="mission-header bg-back" onclick="toggleMission('m2', this)">
+                <span>⚙️ Missão 2: O Motor (Back-End)</span>
+                <span class="icon">➕</span>
+            </div>
+            <div id="m2" class="mission-content">
+                <h3>Passo 1: Configurar no GitHub</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox"> <div>Criar um repositório chamado <code>biblioteca-api</code></div></li>
+                    <li><input type="checkbox"> <div>Colocar a descrição: "API RESTful para biblioteca em Node.js"</div></li>
+                    <li><input type="checkbox"> <div>Marcar as 3 caixinhas: <strong>README</strong>, <strong>.gitignore</strong> (Node) e <strong>License</strong> (Apache 2.0)</div></li>
+                </ul>
+
+                <h3>Passo 2: A Árvore de Pastas (O truque do .gitkeep)</h3>
+                <p><strong>Atenção:</strong> O GitHub joga fora pastas vazias! Para ele salvar suas pastas, você precisa criar um arquivo chamado <code>.gitkeep</code> dentro de cada uma delas. Faça sua árvore ficar igual a esta:</p>
+                
+                <div class="tree-view">
+<span class="folder">📁 biblioteca-api/</span>
+├── <span class="folder">📁 src/</span>                  
+│   ├── <span class="folder">📁 config/</span>           
+│   │   └── <span class="file">📄 .gitkeep</span>
+│   ├── <span class="folder">📁 controllers/</span>      
+│   │   └── <span class="file">📄 .gitkeep</span>
+│   ├── <span class="folder">📁 models/</span>           
+│   │   └── <span class="file">📄 .gitkeep</span>
+│   └── <span class="folder">📁 routes/</span>           
+│       └── <span class="file">📄 .gitkeep</span>
+├── <span class="folder">📁 docs/</span>
+│   └── <span class="file">📄 .gitkeep</span>
+└── <span class="folder">📁 tests/</span>
+    └── <span class="file">📄 .gitkeep</span>
+                </div>
+
+                <ul class="checklist">
+                    <li><input type="checkbox"> <div>Criei as pastas e coloquei um <code>.gitkeep</code> dentro de cada uma delas.</div></li>
+                    <li><input type="checkbox"> <div>Criei o arquivo <code>package.json</code> na raiz do projeto.</div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mission-card">
+            <div class="mission-header bg-pro" onclick="toggleMission('m3', this)">
+                <span>🤝 Missão 3: Rotina de Profissional</span>
+                <span class="icon">➕</span>
+            </div>
+            <div id="m3" class="mission-content">
+                <p>Nesta missão, vamos agir como uma equipe de verdade!</p>
+                <ul class="checklist">
+                    <li><input type="checkbox"> <div><strong>Issues:</strong> Criei 3 "tarefas" na aba Issues do GitHub (Ex: "Criar botão de login").</div></li>
+                    <li><input type="checkbox"> <div><strong>Branches:</strong> Criei um braço (Branch) separado para fazer meu código, sem mexer na branch `main`.</div></li>
+                    <li><input type="checkbox"> <div><strong>Pull Request:</strong> Abri um PR pedindo para juntar meu código rascunho com o oficial.</div></li>
+                    <li><input type="checkbox"> <div><strong>Review:</strong> Um colega da minha sala olhou meu código e aprovou.</div></li>
+                    <li><input type="checkbox"> <div><strong>Kanban:</strong> Criei um quadro na aba "Projects" dividindo as tarefas em: Fazer, Fazendo e Feito.</div></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMission(missionId, headerElement) {
+            const content = document.getElementById(missionId);
+            const icon = headerElement.querySelector('.icon');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.innerHTML = "➕";
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                content.style.display = "block";
+                icon.innerHTML = "➖";
+                icon.style.transform = "rotate(180deg)";
+            }
+        }
+    </script>
+</body>
+</html>
