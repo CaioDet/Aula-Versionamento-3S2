@@ -3,4 +3,4 @@
 #Insira o commit abaixo do comando
 
 nome = input('Insira seu nome: )
-print(f'Parabéns {nome}! Nota 10!
+print(f'Parabéns {nome}! Nota 10!')
