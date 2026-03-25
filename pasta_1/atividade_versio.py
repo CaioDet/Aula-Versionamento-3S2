@@ -2,5 +2,7 @@
 # Print ('Consegui, Prof! Assinado: Nome do aluno')
 #Insira o commit abaixo do comando
 
-nome = input('Insira seu nome: )
+nome = input('Insira seu nome: ')
 print(f'Parabéns {nome}! Nota 10!')
+
+print('Professor Caio Esteve Aqui! Também corrigi um erro')
