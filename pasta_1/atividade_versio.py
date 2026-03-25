@@ -4,7 +4,7 @@
 
 <<<<<<< HEAD
 nome = input('Insira seu nome:Fabian (cubano)')
-print(f'Parabéns {nome}! Nota 10!')
+print(f'Parabéns {fabian}! Nota 10!')
 =======
 nome = input('Insira seu nome: ')
 print(f'Parabéns {Rafael F. Bonfim}! Nota 10!')
